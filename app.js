@@ -29,6 +29,13 @@ class UI {
         //agregamos el html en el código
         listaProducto.appendChild(element);
 
+        //Llamamos desde la misma clase el metodo
+        this.resetForm();
+
+    }
+
+    resetForm() {
+        document.getElementById('formulario').reset();
     }
 
     deleteProduct() {
