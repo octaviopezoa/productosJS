@@ -14,17 +14,16 @@ class UI {
         const listaProducto = document.getElementById('listado');
         
         //creamos un div que se agregará en el html
-        const element = document.createElement('div');
+        const element = document.createElement('tr');
 
         //insertamos el código en el html
         element.innerHTML = `
-        <div class="card text-center mb-4">
-            <div class="card-body">
-                <strong>Producto: </strong> ${producto.nombre}
-                <strong>Precio: </strong> ${producto.precio}
-                <strong>Fecha fabricación: </strong> ${producto.fecha}
-            </div>
-        </div>
+        
+        <tr>
+            <td>${producto.nombre}</td>
+            <td>${producto.precio}</td>
+            <td>${producto.fecha}</td>
+        </tr>
         `;
 
         //agregamos el html en el código
