@@ -23,6 +23,7 @@ class UI {
             <td>${producto.nombre}</td>
             <td>${producto.precio}</td>
             <td>${producto.fecha}</td>
+            <td><a href="#" class="btn btn-danger" name="delete">Eliminar</a></td>
         </tr>
         `;
 
@@ -38,8 +39,12 @@ class UI {
         document.getElementById('formulario').reset();
     }
 
-    deleteProduct() {
-
+    deleteProduct(elemento) {
+        //Si exite el elemento, procede a buscar su elemento padre,
+        //para eliminarlo
+        if (elemento.name === "delete") {
+            elemento.parentElement.parentElement.remove();
+        }
     }
 
     showMessage() {
@@ -63,4 +68,10 @@ document.getElementById('formulario').addEventListener('submit', function(e){
     
     //Evitamos que se refresque la pagina al hacer el submit
     e.preventDefault();
+});
+
+document.getElementById('listado').addEventListener('click', function(e){
+    const ui = new UI();
+    //Buscamos la ubicacion del elemento
+    ui.deleteProduct(e.target);
 })
