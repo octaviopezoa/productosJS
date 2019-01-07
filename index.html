@@ -24,12 +24,35 @@
 
         <!--Aplicacion-->
         <div id="App" class="row pt-5">
-            <div>
-                <h3>Agregue Producto</h3>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Agregue Producto</h3>
+                    </div>
+                    
+                    <form id="formulario" class="card-body">
+                        <div class="form-group">
+                            <input type="text" placeholder="Producto" id="nombre" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" placeholder="Precio" step="0.01" id="precio" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="date" placeholder="Fecha de Fabricacion" id="fecha" class="form-control">
+                        </div>
+                        <input type="submit" value="Guardar" class="btn btn-primary btn-block">
+                    </form>
+                    
+                </div>
             </div>
+            <div id="listado" class="col-md-8">
+                
+            </div>
+
         </div>
 
     </div>
+    <script src="app.js"></script>
 
 
 </body>
